@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Análise Estrutural de Cadeira</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Análise Estrutural de Cadeira</h1>
+        <p>Aplicativo de cálculo de resistência dos materiais</p>
+    </header>
+
+    <main>
+
+        <!-- MENU PRINCIPAL -->
+
+        <section id="menu">
+
+            <h2>Dados da cadeira</h2>
+
+            <div class="card">
+
+                <h3>Material</h3>
+
+                <select id="material">
+                    <option value="">Selecione um material</option>
+                    <option value="aco">Aço</option>
+                    <option value="aluminio">Alumínio</option>
+                    <option value="madeira">Madeira</option>
+                    <option value="plastico">Plástico</option>
+                </select>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Carga</h3>
+
+                <label for="peso">
+                    Peso aplicado (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="peso"
+                    placeholder="Ex: 80"
+                    min="0"
+                >
+
+                <label for="fatorSeguranca">
+                    Fator de segurança
+                </label>
+
+                <input
+                    type="number"
+                    id="fatorSeguranca"
+                    placeholder="Ex: 2"
+                    min="1"
+                    step="0.1"
+                >
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Dimensões da cadeira</h3>
+
+                <label for="altura">
+                    Altura da cadeira (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="altura"
+                    placeholder="Ex: 450"
+                >
+
+
+                <label for="largura">
+                    Largura do assento (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="largura"
+                    placeholder="Ex: 450"
+                >
+
+
+                <label for="profundidade">
+                    Profundidade do assento (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="profundidade"
+                    placeholder="Ex: 450"
+                >
+
+
+                <label for="espessuraAssento">
+                    Espessura do assento (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="espessuraAssento"
+                    placeholder="Ex: 20"
+                >
+
+
+                <label for="comprimentoPerna">
+                    Comprimento das pernas (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="comprimentoPerna"
+                    placeholder="Ex: 400"
+                >
+
+
+                <label for="larguraPerna">
+                    Largura da perna (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="larguraPerna"
+                    placeholder="Ex: 40"
+                >
+
+
+                <label for="espessuraPerna">
+                    Espessura da perna (mm)
+                </label>
+
+                <input
+                    type="number"
+                    id="espessuraPerna"
+                    placeholder="Ex: 40"
+                >
+
+            </div>
+
+
+            <button id="btnCalcular">
+                Analisar cadeira
+            </button>
+
+        </section>
+
+
+        <!-- RESULTADO -->
+
+        <section id="resultado" class="oculto">
+
+            <button id="btnVoltar">
+                ← Voltar
+            </button>
+
+            <h2>Resultado da análise</h2>
+
+            <div id="informacoesMaterial"></div>
+
+            <div id="resultadoAssento"></div>
+
+            <div id="resultadoPernas"></div>
+
+            <div id="resultadoEstrutura"></div>
+
+            <div id="resultadoFinal"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- DADOS -->
+
+    <script src="js/dados/materiais.js"></script>
+
+
+    <!-- CÁLCULOS -->
+
+    <script src="js/calculos/assento.js"></script>
+    <script src="js/calculos/pernas.js"></script>
+    <script src="js/calculos/travessas.js"></script>
+    <script src="js/calculos/encosto.js"></script>
+    <script src="js/calculos/estrutura.js"></script>
+
+
+    <!-- COMPONENTES -->
+
+    <script src="js/componentes/formulario.js"></script>
+    <script src="js/componentes/resultado.js"></script>
+
+
+    <!-- APLICAÇÃO -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

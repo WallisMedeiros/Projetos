@@ -26,7 +26,12 @@ function coletarDadosFormulario() {
         espessuraAssento:
             Number(
                 document.getElementById("espessuraAssento").value
-            ),
+            ),  
+
+        espessuraEncosto:
+            Number(
+                document.getElementById("espessuraEncosto").value
+            ),  
 
         comprimentoPerna:
             Number(
